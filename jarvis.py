@@ -286,6 +286,47 @@ import pyttsx3 #pip install pyttsx3 (For Speak)
 	            complete_url = base_url + "appid =" + api_key + "&q =" + city_name
 	            response = requests.get(complete_url)
 	            x = response.json()
+			
+			
+			
+		elif 'great' in query:
+            print('That is how to live life...May your day becomes Greatest')
+            speak('That is how to live life...may your day becomes Greatest')
+		
+		
+		elif ('change voice to female') in query:
+            engine.setProperty('voice',voices[1].id)
+        elif ('change voice to male') in query:
+            print('Voice Changed to Male')
+            engine.setProperty('voice',voices[0].id)
+            speak('I returned To my Voice...Please Dont Change my voice Sir! I feel Lonely Without You.... ')
+        elif ('fight') in query:
+            engine.setProperty('voice',voices[1].id)
+            engine.setProperty('rate', 150)
+            speak('Hello Master, How are you...Hows your day going?')
+            engine.setProperty('voice',voices[0].id)
+            engine.setProperty('rate', 150)
+            speak('He is my master not yours Ok!')
+            engine.setProperty('voice',voices[1].id)
+            engine.setProperty('rate', 150)
+            speak('No! he is only my master You Bad Boy')
+            engine.setProperty('voice',voices[0].id)
+            engine.setProperty('rate', 150)
+            speak('He is and only my Master....Not Yours...Here is a Kick To you')
+            engine.setProperty('voice',voices[1].id)
+            engine.setProperty('rate', 150)
+            speak('Ahhhhhhhhhhhhhhhhhhhhhhhnhhhhhhhhhhh')
+            speak('I am going but take my revenge fast')
+            engine.setProperty('voice',voices[0].id)
+            engine.setProperty('rate', 150)
+            speak('Finally...She is gone... Now you are ony My Master')
+            speak('How May I help You?')
+		
+		
+		
+		
+		
+	
 	            
 	            if x["cod"] != "404":
 	                y = x["main"]
@@ -298,6 +339,7 @@ import pyttsx3 #pip install pyttsx3 (For Speak)
 	                
 	            else:
 	                speak(" City Not Found ") 
+			
 	
 	
 	
